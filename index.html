@@ -1,26 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Centered Image</title>
-<style>
-  body, html {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f7f7f7;
-  }
-  img {
-    max-width: 100%;
-    max-height: 100vh; /* Adjust the height if you want to limit it to the viewport */
-    object-fit: contain; /* This will ensure that the aspect ratio is maintained */
-  }
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <meta name="rnbo-version" content="1.0.0-alpha.5">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Granular - RNBO Web Export</title>
 </head>
+
 <body>
-<img src="/img/blocknoisetest.gif" alt="Centered Image">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="rnbo-root">
+        <header>
+            <h1>Play Granular</h1>
+        </header>
+
+        <main>
+            <!-- PRESETS FOR TRIGGERING AUDIO IN MOBILE -->
+            <div class="cinco" id="rnbo-presets">
+                <h2>Presets</h2>
+                <em id="no-presets-label">No presets defined</em>
+                <select id="preset-select"></select>
+            </div>
+            <div class="siete" id="rnbo-parameter-sliders">
+                <h2>Parameters</h2>
+                <em id="no-param-label">No parameters</em>
+            </div>
+        </main>
+    </div>
+
+    <script type="text/javascript" src="js/guardrails.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>

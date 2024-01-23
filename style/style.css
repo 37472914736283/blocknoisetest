@@ -1,0 +1,118 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #22668D;
+    font-family: sans-serif;
+}
+
+#rnbo-root {
+    position: relative;
+    margin: auto;
+    max-width: 540px;
+}
+
+header {
+    text-align: center;
+    display: none;
+    visibility: hidden;
+    position: fixed;
+}
+
+main {
+    max-width: 540px;
+    height: 100vh;
+    margin: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main>div {
+    width: 100%;
+}
+
+h2, em {
+    width: 100%;
+    display: none;
+    visibility: hidden;
+    position: fixed;
+}
+
+.cinco select {
+    margin: 3px 0 12px 4px;
+    padding: 7px;
+    border-radius: 50px;
+    background-color: #FF355D;
+    border: 7px solid #FFF5E0;
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: #FFD1DA;
+}
+
+#rnbo-parameter-sliders {
+    display: flex;
+    flex-direction: column;
+}
+
+#rnbo-parameter-sliders > div {
+    display: flex;
+}
+
+#rnbo-parameter-sliders > div > input:first-of-type {
+    flex-grow: 1;
+}
+
+.slider-container {
+    position: relative;
+    min-height: 70px;
+    width: auto;
+    margin: 3px;
+}
+
+input[type="range"] {
+    appearance: none; /* -webkit-appearance */
+    width: auto;
+    height: 70px;
+    background-color: #FFD1DA;
+    border-radius: 7px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 70px;
+    height: 70px;
+    background-color: #FFF5E0;
+    border: 14px solid #22668D;
+    border-radius: 50%;
+    cursor: grab;
+    z-index: 3;
+}
+
+#gain {
+    background-color: #FFF5E0;
+    margin-top: 34px;
+}
+
+#gain::-webkit-slider-thumb {
+    background-color: #FFF5E0;
+    border: 14px solid #FF355D;
+    border-radius: 7px;
+}
+
+@media screen and (max-width: 376px) {
+    .slider-container {
+        min-height: 55px;
+    }
+    input[type="range"] {
+        height: 55px;
+        margin-top: 0;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+        width: 55px;
+        height: 55px;
+    }
+    #gain {
+        margin-top: 12px;
+    }
+}
